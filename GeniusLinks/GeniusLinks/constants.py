@@ -1,5 +1,5 @@
 #Oficial Empresa 
-GENIUS_URL = "https://geniusindustries.org"
+GENIUS_URL = "https://www.geniusindustries.org"
 
 # Cabecera
 THREADS_URL = "https://threads.net/geniu_industries_int"

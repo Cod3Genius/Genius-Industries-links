@@ -8,8 +8,6 @@ from GeniusLinks.styles.styles import Size, Spacing
 from GeniusLinks.styles.colors import Color, TextColor
 from GeniusLinks.components.link_icon import link_icon
 from GeniusLinks.components.info_text import info_text
-from GeniusLinks.components.link_button import link_button
-from GeniusLinks.state.PageState import PageState
 
 
 def header(details=True) -> rx.Component:
@@ -107,7 +105,6 @@ def header(details=True) -> rx.Component:
         width="100%",
         spacing=Spacing.BIG.value,
         align_items="start",
-        on_mount=PageState.check_live
     )
 
 
