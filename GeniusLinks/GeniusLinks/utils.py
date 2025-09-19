@@ -29,6 +29,29 @@ index_meta = [
 ]
 index_meta.extend(_meta)
 
+# GeniusLabs
+
+geniuslabs_title = "Genius Labs | Software engineering solutions"
+geniuslabs_description = "Convertimos tus suenos en realidades digitales."
+
+geniuslabs_meta = [
+    {"name": "og:title", "content": geniuslabs_title},
+    {"name": "og:description", "content": geniuslabs_description},
+]
+geniuslabs_meta.extend(_meta)
+
+
+# advisor
+
+advisor_title = "Genius Industries | Under Construction"
+advisor_description = "Nos encontramos en contruccicon, volveremos pronto."
+
+advisor_meta = [
+    {"name": "og:title", "content": advisor_title},
+    {"name": "og:description", "content": advisor_description},
+]
+advisor_meta.extend(_meta)
+
 
 # Date
 

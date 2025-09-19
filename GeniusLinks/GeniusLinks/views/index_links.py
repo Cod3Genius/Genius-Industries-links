@@ -3,6 +3,7 @@ import GeniusLinks.constants as const
 from GeniusLinks.components.link_button import link_button
 from GeniusLinks.components.title import title
 from GeniusLinks.styles.styles import Color, Spacing
+from GeniusLinks.routes import Route 
 
 
 
@@ -18,11 +19,19 @@ def index_links() -> rx.Component:
             Color.GRAY.value
         ),
         link_button(
+            "Genius Industries Invesments",
+            "Servicios profesionales de gestion y asesorias de portafolios financieros",
+            "/LOGOS/GENIUS-BLACK.png",
+            Route.ADVISOR,
+            True,
+            Color.GRAY.value
+        ),
+        link_button(
             "Genius Labs | Software Solutions",
             "Construyendo software con ♥ desde Italia para el mundo.",
             "/icons/code.svg",
-            const.GENIUS_URL,
-            True,
+            Route.ADVISOR,
+            False,
             Color.GRAY.value
         ),
         title("Canales Informativos"),

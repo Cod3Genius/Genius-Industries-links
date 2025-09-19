@@ -45,7 +45,7 @@ BASE_STYLE = {
     "font_family": Font.DEFAULT.value,
     "font_weight": FontWeight.REGULAR.value,
     "background_color": Color.DARK.value,
-    #"background_image": "url('/bg_dark_pattern.png')",
+    "clas_name": "space-background",
     "background_repeat": "repeat",
     "background_attachment": "fixed",
     rx.heading: {

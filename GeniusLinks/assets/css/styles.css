@@ -1,5 +1,8 @@
 body {
-    background-color: #1A1A1A;
+  margin: 0;
+  height: 100vh;
+  background: radial-gradient(ellipse at bottom, #0d1d31 0%, #000000 100%);
+  overflow: hidden;
 }
 
 a:hover {
@@ -13,3 +16,51 @@ a:hover {
 .blink {
     animation: blinker 1.5s linear infinite;
 }
+
+/* Estrellas */
+.stars {
+  width: 2px;
+  height: 2px;
+  background: transparent;
+  box-shadow: 
+    100px 200px #fff, 300px 400px #fff, 600px 700px #fff,
+    900px 150px #fff, 1200px 500px #fff, 1500px 300px #fff;
+  animation: anim-stars 50s linear infinite;
+}
+
+@keyframes anim-stars {
+  from { transform: translateY(0); }
+  to { transform: translateY(-1000px); }
+}
+
+/* Estrellas fugaces */
+.shooting-star {
+  position: absolute;
+  width: 2px;
+  height: 100px;
+  background: linear-gradient(-45deg, white, transparent);
+  opacity: 0.8;
+  animation: shooting 3s linear infinite;
+}
+
+@keyframes shooting {
+  0% { transform: translateX(0) translateY(0) rotate(45deg); opacity: 1; }
+  100% { transform: translateX(-600px) translateY(600px) rotate(45deg); opacity: 0; }
+}
+
+/* Galaxias */
+.galaxy {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,0.6), rgba(255,255,255,0) 70%);
+  opacity: 0.2;
+  animation: spin 200s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
