@@ -19,10 +19,10 @@ def navbar() -> rx.Component:
         ),
         title("Genius Industries S.A.S"),
         position="sticky",
-        bg=Color.DARK.value,
         border_bottom="1px solid rgba(247, 247, 247, 0.2)",
         padding_x=Size.BIG.value,
         padding_y=Size.DEFAULT.value,
         z_index="999",
-        top="0"
+        top="0",
+        
     )

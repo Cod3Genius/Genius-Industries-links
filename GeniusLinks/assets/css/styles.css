@@ -1,66 +1,84 @@
-body {
-  margin: 0;
+/* Fondo espacial */
+.space-background {
+  position: relative;
+  width: 100vw;
   height: 100vh;
-  background: radial-gradient(ellipse at bottom, #0d1d31 0%, #000000 100%);
+  background: radial-gradient(circle at top, #0b0b2d, #0d0d1a 80%);
   overflow: hidden;
 }
 
-a:hover {
-    color: #3EB0F9 !important;
+/* Estrellas pequeñas */
+.star {
+  display: block;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 0 2px 1px white;
+  opacity: 0.8;
+  animation: twinkle 6s infinite alternate;
 }
 
-@keyframes blinker {
-    50% { opacity: 0; }
-}
-
-.blink {
-    animation: blinker 1.5s linear infinite;
-}
-
-/* Estrellas */
-.stars {
-  width: 2px;
-  height: 2px;
-  background: transparent;
-  box-shadow: 
-    100px 200px #fff, 300px 400px #fff, 600px 700px #fff,
-    900px 150px #fff, 1200px 500px #fff, 1500px 300px #fff;
-  animation: anim-stars 50s linear infinite;
-}
-
-@keyframes anim-stars {
-  from { transform: translateY(0); }
-  to { transform: translateY(-1000px); }
-}
-
-/* Estrellas fugaces */
-.shooting-star {
+/* Estrellas grandes */
+.star-large {
+  display: block;
   position: absolute;
   width: 2px;
-  height: 100px;
-  background: linear-gradient(-45deg, white, transparent);
-  opacity: 0.8;
-  animation: shooting 3s linear infinite;
-}
-
-@keyframes shooting {
-  0% { transform: translateX(0) translateY(0) rotate(45deg); opacity: 1; }
-  100% { transform: translateX(-600px) translateY(600px) rotate(45deg); opacity: 0; }
+  height: 2px;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 0 4px 2px white;
+  opacity: 0.9;
+  animation: twinkle 8s infinite alternate;
 }
 
 /* Galaxias */
 .galaxy {
+  display: block;
   position: absolute;
   width: 300px;
   height: 300px;
+  background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, transparent 70%);
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(255,255,255,0.6), rgba(255,255,255,0) 70%);
-  opacity: 0.2;
-  animation: spin 200s linear infinite;
+  filter: blur(8px);
+  animation: rotate 120s linear infinite;
 }
 
-@keyframes spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+/* Planetas */
+.planet {
+  display: block;
+  position: absolute;
+  border-radius: 50%;
+  animation: float 30s ease-in-out infinite;
+  box-shadow: inset -5px -5px 15px rgba(0,0,0,0.6),
+              inset 5px 5px 10px rgba(255,255,255,0.2);
 }
 
+/* Animaciones */
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) translateX(0); }
+  25% { transform: translateY(-15px) translateX(10px); }
+  50% { transform: translateY(0) translateX(20px); }
+  75% { transform: translateY(15px) translateX(10px); }
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+
+/* Planetas con anillos */
+.planet-ring {
+  display: block;
+  position: absolute;
+  border-radius: 50%;
+  border: 2px solid rgba(200,200,255,0.5);
+  animation: float 40s ease-in-out infinite;
+  transform: rotate(15deg);
+}

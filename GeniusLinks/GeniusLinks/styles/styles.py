@@ -13,7 +13,7 @@ BOUNCEIN_ANIMATION = "animate__animated animate__bounceIn"
 STYLESHEETS = [
     "https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;800&display=swap",
     "https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css",
-    "/css/styles.css"
+    "/css/styles.css" 
 ]
 
 
@@ -44,8 +44,7 @@ class Spacing(Enum):
 BASE_STYLE = {
     "font_family": Font.DEFAULT.value,
     "font_weight": FontWeight.REGULAR.value,
-    "background_color": Color.DARK.value,
-    "clas_name": "space-background",
+    "class_name": "space-background",
     "background_repeat": "repeat",
     "background_attachment": "fixed",
     rx.heading: {
