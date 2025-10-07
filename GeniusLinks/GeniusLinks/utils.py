@@ -9,11 +9,8 @@ def lang() -> rx.Component:
     return rx.script("document.documentElement.lang='es'")
 
 
-preview = "https://moure.dev/preview.jpg"
-
 _meta = [
     {"name": "og:type", "content": "website"},
-    {"name": "og:image", "content": preview},
     {"name": "twitter:card", "content": "summary_large_image"},
     {"name": "twitter:site", "content": "@G_industries19"}
 ]
@@ -39,6 +36,18 @@ geniuslabs_meta = [
     {"name": "og:description", "content": geniuslabs_description},
 ]
 geniuslabs_meta.extend(_meta)
+
+
+# Investments
+
+investments_title = "Genius Industries | Invesments Services"
+investments_description = "Servicios de gestion de portafolios de inversion profesional "
+
+investments_meta = [
+    {"name": "og:title", "content": investments_title},
+    {"name": "og:description", "content": investments_description},
+]
+investments_meta.extend(_meta)
 
 
 # advisor

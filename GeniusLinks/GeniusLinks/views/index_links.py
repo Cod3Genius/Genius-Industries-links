@@ -22,8 +22,8 @@ def index_links() -> rx.Component:
             "Genius Industries Invesments",
             "Servicios profesionales de gestion y asesorias de portafolios financieros",
             "/LOGOS/GENIUS-BLACK.png",
-            Route.ADVISOR,
-            True,
+            Route.INVESTMENTS,
+            False,
             Color.GRAY.value
         ),
         link_button(

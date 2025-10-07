@@ -9,7 +9,6 @@ from GeniusLinks.styles.styles import Color,Size,Font
     route=Route.ADVISOR.value,
     title=utils.advisor_title,
     description=utils.advisor_description,
-    image=utils.preview,
     meta=utils.advisor_meta
 )
 
