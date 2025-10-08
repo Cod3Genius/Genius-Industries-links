@@ -16,25 +16,15 @@ import GeniusLinks.utils as utils
 
 
 def investments() -> rx.Component:
-    # Cards data: each entry is (logo_path, title, description).
     cards = [
-        ("/LOGOS/GENIUS-BLACK-FULL.png", "Services and Products",
-        "Explore our diverse range of services and products designed to meet your needs.", Route.ADVISOR),
+        ("/LOGOS/GENIUS-BLACK-FULL.png", "Forex account management",
+        "Professional management of forex services portfolios in the best markets.", Route.ADVISOR),
 
-        ("/LOGOS/GENIUS-BLACK-FULL.png", "Financial Advisory",
-        "Personalized investment strategies and portfolio reviews.", Route.ADVISOR),
+        ("/LOGOS/GENIUS-BLACK-FULL.png", "Trading Crypto ",
+        "Crypto trading account management, with real returns.", Route.ADVISOR),
 
         ("/LOGOS/GENIUS-BLACK-FULL.png", "Real Estate",
         "Investment opportunities in residential and commercial properties.", Route.ADVISOR),
-
-        ("/LOGOS/GENIUS-BLACK-FULL.png", "Crypto",
-        "Crypto asset management and custody solutions.", Route.ADVISOR),
-
-        ("/LOGOS/GENIUS-BLACK-FULL.png", "Education",
-        "Workshops and content to grow your investing knowledge.",Route.ADVISOR),
-
-        ("/LOGOS/GENIUS-BLACK-FULL.png", "Support",
-        "Dedicated support for all our clients.", Route.ADVISOR),
     ]
 
     return rx.box(
@@ -48,7 +38,7 @@ def investments() -> rx.Component:
                         cards,
                         lambda c: card(c[0], c[1], c[2], c[3]),
                     ),
-                    grid_template_columns="repeat(auto-fit, minmax(500px, 1fr))",
+                    grid_template_columns="repeat(auto-fit, minmax(400px, 1fr))",
                     gap="30px",
                     width="100%",
                     justify_items="center",

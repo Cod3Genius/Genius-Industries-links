@@ -1,28 +1,89 @@
 import reflex as rx
-import GeniusLinks.styles.styles as styles
-from GeniusLinks.routes import Route
-from GeniusLinks.styles.styles import Size
-from GeniusLinks.styles.colors import Color
-from GeniusLinks.components.title import title
+
+
+def navbar_icons_item(
+    text: str, icon: str, url: str
+) -> rx.Component:
+    return rx.link(
+        rx.hstack(
+            rx.icon(icon),
+            rx.text(text, size="4", weight="medium"),
+        ),
+        href=url,
+    )
+
+
+def navbar_icons_menu_item(
+    text: str, icon: str, url: str
+) -> rx.Component:
+    return rx.link(
+        rx.hstack(
+            rx.icon(icon, size=16),
+            rx.text(text, size="3", weight="medium"),
+        ),
+        href=url,
+    )
 
 
 def navbar() -> rx.Component:
-    return rx.hstack(
-        rx.link(
-            rx.image(
-                src="/LOGOS/GENIUS-BLACK-FULL.png",
-                width="auto",
-                height=Size.LARGE.value,
-                alt=f"Genius logo"
+    return rx.box(
+        rx.desktop_only(
+            rx.hstack(
+                rx.hstack(
+                    rx.image(
+                        src="/LOGOS/GENIUS-BLACK-FULL.png",
+                        width="2.25em",
+                        height="auto",
+                        border_radius="25%",
+                    ),
+                    rx.heading(
+                        "Genius Industries S.A.S", size="7", weight="bold"
+                    ),
+                    align_items="center",
+                ),
+                rx.hstack(
+                    navbar_icons_item("Home", "home", "/#"),
+                    
+                    spacing="6",
+                ),
+                justify="between",
+                align_items="center",
             ),
-            href=Route.INDEX.value
         ),
-        title("Genius Industries S.A.S"),
-        position="sticky",
-        border_bottom="1px solid rgba(247, 247, 247, 0.2)",
-        padding_x=Size.BIG.value,
-        padding_y=Size.DEFAULT.value,
-        z_index="999",
-        top="0",
-        
+        rx.mobile_and_tablet(
+            rx.hstack(
+                rx.hstack(
+                    rx.image(
+                        src="/LOGOS/GENIUS-BLACK-FULL.png",
+                        width="2em",
+                        height="auto",
+                        border_radius="25%",
+                    ),
+                    rx.heading(
+                        "Reflex", size="6", weight="bold"
+                    ),
+                    align_items="center",
+                ),
+                rx.menu.root(
+                    rx.menu.trigger(
+                        rx.icon("menu", size=30)
+                    ),
+                    rx.menu.content(
+                        navbar_icons_menu_item(
+                            "Home", "home", "/"
+                        ),
+                        
+                    ),
+                    justify="end",
+                ),
+                justify="between",
+                align_items="center",
+            ),
+        ),
+        bg=rx.color("accent", 3),
+        padding="1em",
+        # position="fixed",
+        # top="0px",
+        # z_index="5",
+        width="100%",
     )

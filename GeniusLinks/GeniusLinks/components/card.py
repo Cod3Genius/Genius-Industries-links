@@ -18,7 +18,7 @@ def card(image: str,title:str, description:str, url: str) -> rx.Component:
         ),
         padding=Size.MEDIUM.value,
         margin_y=Size.MEDIUM.value,
-        width="300px",
+        width="400px",
         border_radius="lg",
         border=f"1px solid {Color.LIGHT.value}",
         shadow="md,",
